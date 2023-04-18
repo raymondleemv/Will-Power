@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+button {
+	background: none;
+	border: none;
+}
+
+.button {
+	cursor: pointer;
+}
+
+.App {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Montserrat';
+	font-weight: 600;
+}
+
+@media screen and (min-width: 390px) {
+	.App {
+		width: 390px;
+		height: 844px;
+	}
+}

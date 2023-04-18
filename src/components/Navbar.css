@@ -1,0 +1,29 @@
+.navbar {
+	position: absolute;
+	bottom: 0;
+	display: grid;
+}
+
+.navbar__icon-container {
+	grid-row: 1 / -1;
+	grid-column: 1 / -1;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 16px;
+}
+
+.navbar__icon-subcontainer {
+	display: flex;
+	gap: 27px;
+}
+
+.navbar__middle-icon {
+	margin-bottom: 4px;
+}
+
+.navbar__background {
+	grid-row: 1 / -1;
+	grid-column: 1 / -1;
+}

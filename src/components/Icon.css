@@ -1,0 +1,14 @@
+.icon {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: 5px;
+	color: rgba(255, 255, 255, 0.3);
+	z-index: 2;
+}
+
+.icon p {
+	font-family: 'montserrat';
+	font-size: 10px;
+	font-weight: 600;
+}
