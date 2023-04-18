@@ -82,7 +82,7 @@ export const videoCaptions = [
 	},
 	{
 		time: '109',
-		caption: 'you can always the number of sets or the number of reps',
+		caption: 'you can always increase the number of sets or the number of reps',
 	},
 	{
 		time: '117',

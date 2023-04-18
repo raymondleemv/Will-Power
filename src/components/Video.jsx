@@ -12,9 +12,12 @@ export default function Video(props) {
 	let volumeBtnImg = volume ? '/volume-off.svg' : '/volume-on.svg';
 	let captionsBtnImg = showCaptions ? '/captions-off.svg' : '/captions-on.svg';
 	let captionsButtonHandleClick = () => {
+		let captions = document.querySelector('.video__captions');
 		if (showCaptions === true) {
+			captions.blur();
 			setShowCaptions(false);
 		} else {
+			captions.focus();
 			setShowCaptions(true);
 		}
 	};
@@ -43,6 +46,7 @@ export default function Video(props) {
 		setVideo(document.querySelector('.video'));
 		let videoElement = document.querySelector('.video');
 		let progress = document.querySelector('.video-progress-bar');
+		let captions = document.querySelector('.video__captions');
 		let counter = 0;
 		setInterval(function () {
 			progress.value = Math.round(
@@ -53,6 +57,8 @@ export default function Video(props) {
 			}
 			if (videoElement.currentTime > Number(videoCaptions[counter].time)) {
 				setCaptions(videoCaptions[counter].caption);
+				captions.blur();
+				captions.focus();
 				counter++;
 			}
 		}, 100);
@@ -77,7 +83,14 @@ export default function Video(props) {
 					</button>
 				</div>
 			</div>
-			<p className="video__captions">{showCaptions ? captions : ''}</p>
+			<p className="video__captions" tabIndex="0">
+				{showCaptions ? captions : ''}
+			</p>
+			{/* {showCaptions && (
+				<p className="video__captions" tabIndex="0">
+					{captions}
+				</p>
+			)} */}
 			<div className="video__info">
 				<div>
 					<p className="video__name">{props.video.name}</p>
